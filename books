@@ -23,7 +23,6 @@ $stmt->execute();
 
 $books = $stmt->fetchAll();
 
-var_dump($books)
 
 ?>
 
@@ -33,14 +32,17 @@ var_dump($books)
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
+
 </head>
 <body>
-     <ul>
      <?php
           foreach($books as $book){
-               echo $book['title'];
+          echo '<li>' . '<a href= "book.php">' . $book['title'] . '</a>';
+          
+          
           }
      ?>
-     </ul>
+     </li>
 </body>
 </html>
+
